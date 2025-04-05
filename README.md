@@ -1,1 +1,97 @@
-# Projeto3anos3
+# Projeto3anos3 Projeto básico de HTML,CSS e JS em um único arquivo, feito para surpresa para minha namorada referente aos nossos 3 anos e 3 meses de relacionamento.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 3 anos e 3 meses</title>
+</head>
+
+<body>
+
+    <div class="painel">
+            <h1> Feliz 3 Anos e 3 meses meu bixin pequeno!</h1>
+        <div style="margin: auto;width: 170px;">
+            <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+            <h3> Aceita namorar comigo?</h3>
+
+        
+         <a href="https://www.youtube.com/watch?v=1rZky1yaW1I"><button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
+        </div>
+    </div>
+</body>
+
+    <style>
+        body{
+            background-color: red;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 800px;
+            height: 800px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         }
+         #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+         }
+         #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+            text-align: center;
+         }
+
+         .btn {
+        background: red;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+    
+
+    </style>
+
+
+    <script>
+        function sim() {
+            alert("Você aceitou namorar comigo!");
+            // redireciona para um URL após clicar no SIM
+            location.href = "https://www.youtube.com/watch?v=1rZky1yaW1I";
+        }
+    
+        function desvia(btn) {
+            // btn declarado na função
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+    
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    
+    </script>
+    
+</html>
